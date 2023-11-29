@@ -1,0 +1,14 @@
+#TABLE ALUNOS
+
+CREATE TABLE Alunos(
+  AlunoID int not null,
+  NomeAluno varchar not null,
+  PRIMARY KEY( AlunoID )
+);
+
+# TABLE NOTAS
+
+CREATE TABLE Notas(
+  Disciplina varchar not null,
+  Nota int not null,
+);
