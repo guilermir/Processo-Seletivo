@@ -2,7 +2,7 @@
 
 CREATE TABLE Clientes(
   ClienteID int not null,
-  NomeClient varchar not null,
+  NomeCliente varchar not null,
   Email varchar not null,
   PRIMARY KEY( ClienteID )
 );
@@ -25,3 +25,9 @@ CREATE TABLE Funcionarios(
   Salario int not null,
   PRIMARY KEY( FuncionarioID )
 );
+
+SELECT Clientes.CLienteID, Pedidos.PedidosID
+FROM Pedidos
+FULL OUTER JOIN Clientes
+ON Clientes.CLienteID=Pedidos.PedidosID
+ORDER BY Clientes.NomeCliente
